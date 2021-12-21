@@ -45,5 +45,12 @@ Após realizar a conexão com o cluster, foi possível utilizar o comando “kub
 ![image](https://user-images.githubusercontent.com/26250050/146973088-a4692690-5d18-4ea3-9394-3a6b134361e5.png)
 
 ![image](https://user-images.githubusercontent.com/26250050/146973104-864d2ecf-e065-4fd5-bee2-bbfc0d2723b3.png)
+
+### Outros
+Criei o arquivo teste-connection-2.yaml de forma que ele possa ser executado junto do terraform apply. Para isso, removi a annotation “helm.sh/Hook:test e alterei os argumentos para que o pod executasse da maneira correta. O sleep foi utilizado para que o loadbalancer tivesse tempo de subir antes que o pod executasse o wget. Esse arquivo pode ser ativado/desativado através da flag .Values.teste.enabled
+
+
+![image](https://user-images.githubusercontent.com/26250050/146974281-4359c66e-d2c1-4308-bb5d-395812dd0529.png)
+
  
 
