@@ -1,0 +1,17 @@
+{{- if .Values.test.enabled }}
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "hello-kubernetes.fullname" . }}-test-connection"
+  labels:
+    {{- include "hello-kubernetes.labels" . | nindent 4 }}
+#  annotations:
+#    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ["/bin/sh","-c"]
+      args: ["sleep 60 ; wget hello-kubernetes-loadbalancer:80"]
+  restartPolicy: Never
+{{- end }}

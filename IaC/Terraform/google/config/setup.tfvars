@@ -1,0 +1,6 @@
+project        = "thaigo alves"
+project_id     = "thaigo-alves"
+region         = "us-west1"
+node_location  = "us-west1-a"
+name           = "development"
+node_pool_name = "default" 

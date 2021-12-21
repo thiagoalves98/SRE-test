@@ -1,0 +1,9 @@
+image:
+  repository: "gcr.io/entrevista-common/hello-kubernetes"
+  tag: "v1.10"
+
+autoscaling:
+  enabled: true
+  minReplicas: 4
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80
